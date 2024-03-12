@@ -19,11 +19,7 @@ const Page = ({ params }: { params: { count?: string[] } }) => {
 
   return (
     <BlogPageLayout title="All Blog Posts">
-      <PostPaginator
-        postPerPage={config.blog.postPerPage}
-        page={count}
-        pageLink="/blog/page"
-      />
+      <PostPaginator postPerPage={config.blog.postPerPage} page={count} />
     </BlogPageLayout>
   );
 };

@@ -43,13 +43,13 @@ const BlogCard = ({
           className={cn(
             "font-medium text-xl md:text-2xl mb-2 hover:underline",
           )}>
-          <Link href={href}>{title}</Link>
+          <Link href={'blog'+ href}>{title}</Link>
         </h3>
         <p className={cn("text-foreground-secondary")}>{desc}</p>
         {isArrayNotEmpty(tags) && (
           <div className={cn("mt-4 flex gap-2 flex-wrap")}>
             {tags.map((tag) => (
-              <Link key={tag} href={`/tags/${slugify(tag)}`}>
+              <Link key={tag} href={`/blog/tags/${slugify(tag)}`}>
                 <PostTag>{tag}</PostTag>
               </Link>
             ))}
